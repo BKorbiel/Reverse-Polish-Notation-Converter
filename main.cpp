@@ -84,6 +84,6 @@ int main()
         result = result + currOperator + " ";
         operatorsStack.pop();
     }
-    cout<<result;
+    cout<<"Expression in Reverse Polish Notation: " + result;
     return 0;
 }
