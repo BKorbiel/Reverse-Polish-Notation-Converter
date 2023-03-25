@@ -32,6 +32,8 @@ void fromRPN() {
             expr += input + " ";
             if (right.priority < operatorPriority) {
                 expr += "( " + right.expression + " ) ";
+            } else if ((right.priority == operatorPriority) && (input != "+" && input != "*" && operatorPriority>2)) {
+                expr += "( " + right.expression + " ) ";
             } else {
                 expr += right.expression + " ";
             }
